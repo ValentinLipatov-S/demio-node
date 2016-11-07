@@ -7,7 +7,7 @@ app.get('/', function(request, response)
 {
 	var urlParsed = url.parse(request.url, true);
 	console.log(urlParsed);
-	
+	response.end(urlParsed.query.message);
 	if(urlParsed.pathname == '/echo' && urlParsed.query.message)
 	{
 		response.end(urlParsed.query.message);
