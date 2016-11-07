@@ -5,8 +5,6 @@ app.use(express.logger());
 
 app.get('/', function(request, response) 
 {
-	response.send(request.url + " " + request.method);
-	
 	var urlParsed = url.parse(request.url, true);
 	console.log(urlParsed);
 	
