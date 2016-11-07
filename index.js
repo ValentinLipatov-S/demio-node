@@ -1,13 +1,6 @@
-var express = require("express");
-var app = express();
-app.use(express.logger());
-
-app.get('/', function(request, response) 
+var http = require("http");
+var server = new http.Server(function(req, res)
 {
-	response.send('Hello World! ' + request);
+	res.end(req.method, req.url);
 });
-
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+server.listen(5000, "54.247.105.137");
