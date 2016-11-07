@@ -4,10 +4,6 @@ app.use(express.logger());
 
 app.get('/', function(request, response) 
 {
-	console.log(request.method);
-    console.log(request.headers);
-    console.log(request.url);
-    response.write('hi');
 	response.send('Hello World!');
 });
 
