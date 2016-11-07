@@ -5,8 +5,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) 
 {
-	var urlParsed = url.parse(request.url, true);
-	response.send(urlParsed.query.message);
+	response.send(request.url + " | " + request.method);
 });
 var port = process.env.PORT || 5000;
 app.listen(port, function() {console.log("Listening on " + port);});
